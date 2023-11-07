@@ -1,0 +1,140 @@
+.manager-login-page{
+    background-color: white;
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container {
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+.login-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.login-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.login-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+/*  ------------------manager-page styling goes here------------------- */
+
+.manager-page-main-container{
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.manager-card-main-container{
+    height: 33.33vh; 
+    width:100%; 
+}
+.manager-card-title{
+    position: absolute;
+    width: 100%;
+    /* background-color: #e1e1e6; */
+    background-color: #e6e6eb;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.manager-card-container{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    align-items: center;
+    /* background-color:blanchedalmond; */
+    padding-left: 20px;
+    gap: 25px;
+    height: calc(40.33vh - 28px);
+}
+
+/* ------------pending-item-card----------- */
+
+.pending-item-card{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    background-color:  #ededff;
+    border-radius: 10px;
+    min-width: 205px;
+    height: 185px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+
+/* ------------preparing-item-card----------- */
+
+.preparing-item-card{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    background-color:  #ededff;
+    border-radius: 10px;
+    min-width: 205px;
+    height: 185px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+
+/* ------------delivered-item-card----------- */
+
+.delivered-item-card{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    background-color:   #ededff;
+    border-radius: 10px;
+    min-width: 205px;
+    height: 185px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+
+/* ------------paid-item-card----------- */
+
+.paid-item-card{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    background-color:   #ededff;
+    border-radius: 10px;
+    min-width: 205px;
+    height: 185px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+

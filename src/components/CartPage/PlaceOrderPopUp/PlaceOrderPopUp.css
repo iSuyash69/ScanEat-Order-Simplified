@@ -1,0 +1,31 @@
+.place-order-pop-up{
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 19px 22px;
+    height: 60.04px;
+    background-color:#60b246;
+    color: white;
+    animation: slide-up 0.5s forwards; 
+    gap: 10px;
+    align-items: center;
+}
+@keyframes slide-up {
+    from {
+        transform: translateY(100%); /* Start from below the screen */
+    }
+    to {
+        transform: translateY(0); /* Slide up to final position */
+    }
+}
+.place-order-pop-up h3{
+    font-weight: 500;
+    font-size: 18px;
+}
+.place-order-pop-up h2{
+    font-weight: 400;
+    font-size: 18px;
+}

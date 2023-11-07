@@ -1,0 +1,47 @@
+.menu-popup-modal-main-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+    animation: fadeInBackground 0.7s forwards;
+    z-index: 999;
+}
+@keyframes fadeInBackground{
+    from{
+        background-color: transparent;
+    }
+    to{
+        background-color: white;
+    }
+}
+.menu-popup-modal-sub-container .close-pop-up{
+    position: absolute;
+    top: 0;
+    right:0;
+    margin-top: 17px;
+    margin-right: 22.5px;
+    font-size: 20px;
+}
+.menu-popup-modal-sub-container{
+    display: flex;
+    height: 95%;
+    justify-content: center;
+    align-items: center;
+}
+.menu-popup-modal-sub-container div{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    align-items: center;
+    animation: fadeInFont 1.3s forwards;
+}
+@keyframes fadeInFont{
+    from{
+        color: transparent;
+    }
+    to{
+        color: black;
+    }
+}

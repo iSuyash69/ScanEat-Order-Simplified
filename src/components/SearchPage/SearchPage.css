@@ -1,0 +1,55 @@
+.search-page-main-container{
+    padding-top: 55px;
+    display: flex;
+    flex-direction: column;
+}
+.search-page-searchBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.search-page-searchBox input{
+    width: 90%;
+    position: relative;
+    height: 48px;
+    padding-left: 13px;
+    border:solid 1px transparent;
+    background: rgba( 113, 113, 119, 0.02 );
+    backdrop-filter: blur(2px );
+    border-radius: 10px;
+    border: 2px solid orange;
+    border-radius: 11px;
+    color: gray;
+    font-size: 14.5px;
+    outline:orange;
+}
+.search-page-searchBox input::placeholder{
+    color: gray;
+    font-weight: 400;
+}
+.search-page-searchBox i{
+    position: absolute;
+    right: 40;
+    font-size: 18px;
+    color: darkgray;
+}
+.search-page-hr{
+    border-bottom: 2px solid #e6e6e6;
+    width: 97.5%;
+    margin:auto;
+    margin-top: 22px;
+}
+.search-page-card-container{
+    margin-top: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search-page-food-category-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 3px;
+}

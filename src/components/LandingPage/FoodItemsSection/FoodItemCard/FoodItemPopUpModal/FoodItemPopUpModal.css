@@ -1,0 +1,119 @@
+.food-item-popup-modal-main-container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    background-color: transparent;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    animation: slide-up 0.5s forwards;
+    background-color: white;
+    z-index: 100;
+    width: 100%;
+}
+@keyframes slide-up {
+    from {
+        transform: translateY(100%); 
+    }
+    to {
+        transform: translateY(0); 
+    }
+}
+.food-item-popup-modal{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: transparent;
+    animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+    from {
+      background: rgba(0, 0, 0, 0); 
+    }
+    to {
+      background: rgba(0, 0, 0, 0.7); 
+    }
+  }
+.food-item-popup-modal-sub-container1{
+    position: relative;
+    display: flex;
+}
+.food-item-popup-modal-sub-container1 img{
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    width: 100%;
+    height: 300px;
+}
+.food-item-popup-modal-sub-container1 i{
+    font-size: 11px;
+    position: absolute;
+    right: 0;
+    background-color: lightgrey;
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.food-item-popup-modal-sub-container2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 12px;
+}
+.food-item-popup-modal-sub-container2 img{
+    width: 17px;
+    background-color:#0f8a65;
+    border-radius: 2px;
+}
+.food-item-popup-modal-sub-container2 button{
+    color: #60b246;
+    background-color: #f5f5f5;
+    border: 1px solid #d3d3d4;
+    border-radius: 7px;
+    width: 100px;
+    height: 39px;
+    margin-top: 21px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 12px;
+    left: 11px;
+    box-shadow: 6px 10px 10px #00650026;
+}
+.food-item-popup-modal-sub-container2 h3{
+    width: 70%;
+    margin-top: 9px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1;
+}
+.food-item-popup-modal-sub-container2 p{
+    font-weight: 500;
+    margin-top: 8px;
+    font-size: 15px;
+}
+.food-item-popup-modal-sub-container3{
+    display: flex;
+    justify-content: flex-start;
+    width: 85%;
+    margin-left: 12px;
+    margin-top: 12px;
+    margin-bottom: 15px;
+}
+.food-item-popup-modal-sub-container3 h4{
+    line-height: 1.3;
+    font-weight: 400;
+    color:gray;
+    font-size: 14px;
+}
+.food-item-popup-modal-sub-container2 .quantity{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+

@@ -1,0 +1,381 @@
+/* ---------------------LandingPage styling goes here----------------- */
+
+.landingPage-container{
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+}
+/* -------------------Header styling goes here-------------- */
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------NavBar styling goes here-------- */
+
+.navBar-container{
+    /* background-color: #FFDAB9; */
+    /* border-bottom: solid 2px lightgray; */
+    box-shadow: 0px 2px 5px rgba(2, 2, 1, .15);
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    opacity: 75%;
+}
+.navBar-sub-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 22px;
+    height: 55px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo h2{
+    display: flex;
+}
+.logo h2 img{
+    width: 28px;
+    height: 28px;
+    margin-top: 4.5px;
+}
+.logo h2 span{
+    margin-top:1px;
+    color: #fc8019;
+}
+.navBar-sub-container img{
+    width: 80px;
+    height: 73px;
+}
+.navBar-sub-container i{
+    font-size: 18px;
+}
+
+/* ---------SearchBar styling goes here------- */
+
+.searchBar-container{
+    display: flex;
+    position: relative;
+    margin: 10px 3px;
+    margin-top: 68px;
+}
+.background-img{
+    background-image: url("https://images01.nicepagecdn.com/page/67/56/website-template-preview-67567.jpg");
+    width: 100%;
+    height: 275px;
+    background-repeat: no-repeat;
+    background-size: 100% 275px;
+    background-position: 100% 100%;
+    border-radius: 10px; 
+}
+.searchBox{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+    width: 100%;
+    align-items:flex-start;
+    /* height: 20%; */
+    margin-bottom: 16px;
+}
+.searchBox input{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    padding-left: 10px;
+    border:solid 1px transparent;
+    /* background: rgba( 0, 0, 0, 0.35 ); */
+    background: rgba( 113, 113, 119, 0.11 );
+    /* background: rgba( 196, 188, 198, 0.7 ) */
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+    backdrop-filter: blur( 9px );
+    /* -webkit-backdrop-filter: blur( 9px ); */
+    border-radius: 10px;
+    border: 2px solid orange;
+    /* opacity: 90%; */
+    border-radius: 15px;
+    color: white;
+
+}.searchBox input::placeholder{
+    color: white;
+    font-weight: 300;
+}
+.searchBox i{
+    color: #fc8019;
+    position: absolute;
+    margin-top: 13px;
+    /* width: 100%; */
+    right: 55;
+    /* right: 0; */
+    font-size: 20px;
+}
+
+/* -----------------OffersSection styling goes here-------------- */
+
+.offersSection-container{
+    display: grid;
+    grid-auto-flow: column;
+    overflow: auto;
+    padding-left: 10px;
+    /* margin-top: 2px; */
+}
+.offersSection-container::-webkit-scrollbar{
+    display: none;
+}
+.offers-slider-track{
+    display: flex;
+    gap: 10px;
+    animation: scroll 7000s linear infinite;
+}
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translate(-100%);
+    }
+}
+.offers-card{
+    width: 85vw;
+    height: 178px;
+}
+
+/* ------------------Shimmer UI styling goes here----------------- */
+
+.shimmer-main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 12px;
+    gap: 25px;
+}
+.shimmer-div-one{
+    margin-top: 90px;
+    height: 100px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #f3f3f3 25%, #e1e1e1 50%, #f3f3f3 75%);
+    background: linear-gradient(90deg, #e0e0e0 25%, #cecece 50%, #e0e0e0 75%);
+    /* background: linear-gradient(90deg, #e0e0e0 0%, #d5d5d5 25%, #cdc5c5 50%, #d9d9d9 75%, #f3f3f3 100%); */
+    width: 100%;
+    animation: shimmer 1.7s infinite;
+    background-size: 200% 100%;
+}
+.shimmer-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh;
+    row-gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+.shimmer-card{
+    width: 21vw;
+    height: 80px;
+    background: linear-gradient(90deg, #f3f3f3 25%, #e1e1e1 50%, #f3f3f3 75%);
+    border-radius: 7px;
+    animation: shimmer 1.7s infinite;
+    background-size: 200% 100%;
+}
+.shimmer-div-two{
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(90deg, #f3f3f3 25%, #e1e1e1 50%, #f3f3f3 75%);
+    border-radius: 10px;
+    animation: shimmer 1.7s infinite;
+    background-size: 200% 100%;
+}
+.time-two{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+@keyframes shimmer{
+    0%{
+        background-position:100% ;
+    }
+    100%{
+        background-position:-100%;
+    }
+}
+/* -----------FoodItemsSection styling goes here----------  */
+
+.restaurants-menu-card-container{
+    display: flex;
+    flex-direction: column;
+    /* background-color: cadetblue; */
+    align-items:center;
+    width: 100%;
+    margin-top: 7px;
+}
+.veg-toggle-container{
+    display: flex;
+    align-self: flex-start;
+    margin-left: 15px;
+    gap: 7px;
+    margin-bottom: 25px;
+    align-items: center;
+    margin-top: 5px;
+}
+.veg-toggle-container h3{
+    font-size: 13px;
+    font-weight: 600;
+}
+.veg-toggle-container .veg-toggle{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    width: 45px;
+    height: 27px;
+    border-radius: 15px;
+    padding: 3px;
+    background-color: lightgray;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+.veg-toggle-container .veg-toggle .outer-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21px;
+    height: 21px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    background-color:white;
+}
+.veg-toggle-container .veg-toggle.clicked{
+    background-color: #0f8a65;
+}
+.veg-toggle-container .veg-toggle.clicked .outer-circle{
+    transform: translate(17px);
+}
+
+.restaurants-menu-card-container .title{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: beige; */
+    margin-bottom: 15px;
+} 
+.restaurants-menu-card-container .title h2{
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.restaurants-menu-card-container .title i{
+    margin-right: 15px;
+}
+.fa-solid.fa-chevron-down.rotate{
+    transform: rotate(180deg);
+}
+.restaurants-menu-card-container .hr{
+    height: 16px;
+    border-bottom: 16px solid #f1f1f6;
+    /* background-color: lightgray; */
+    margin-bottom:2.5vh;
+    width: 100%;
+    border-top: none;
+}
+.restaurants-menu-card-container .hr-max{
+    width: 100%; 
+    height: 156px;
+    margin-top: 10px;
+    background-color: #f1f1f6;
+
+}
+.menu-card{
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+    min-height:170px ;
+}
+.menu-card div{
+    margin-top: 15px;
+}
+.menu-card #one{
+    display: flex;
+    flex-direction: column;
+} 
+.menu-card #two{
+    display: flex;
+    flex-direction: column;
+}
+#one{
+    margin-right: 18px;
+}
+#one img{
+    margin-top:6px;
+    width: 15px;
+    background-color: #0f8a65;
+}
+#one h3{
+    font-weight: 500;
+    margin-top: 6px;
+    font-size:15px;  
+}
+#one p{
+    margin-top: 3px;
+    font-weight: 400;
+    font-size: 14px;
+}
+#one h4{
+    margin-top: 14px;
+    font-weight: 300;
+    font-size: 12.5px;
+    line-height: 1.4;
+    margin-bottom: 23px;
+    width: 85%;
+    color:rgb(40 44 63 / 60%);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+#two{
+    position: relative;
+}
+#two img{
+    width: 123.9px;
+    height: 100.8px;
+    border-radius: 10px;
+    margin-top:8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.menu-card button{
+    position: absolute;
+    width: 100px;
+    height: 39px;
+    margin-top: 85px;
+    /* bottom:40; */
+    left: 11;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 7px;
+    border: 1px solid lightgray;
+    background-color:whitesmoke;
+    box-shadow: 6px 10px 10px 0px rgba(0, 101, 0, 0.15);
+    color:#60b246;
+}
+.menu-card hr{
+    position: absolute;
+    width: 95%;
+    left: 10;
+    border-top: none ;
+    background-color: rgb(40 44 63 /55%);
+}
+#two .quantity{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+
+

@@ -1,0 +1,118 @@
+[
+    {
+        "id": "930816",
+        "imageId": "rng/md/carousel/production/d59fb2bd4af3a0850d426a658172f899",
+        "action": {
+            "link": "https://www.swiggy.com/collections/85935?collection_id=85935&tags=layout_ux4&type=rcv2",
+            "text": "All new super",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "GET 50% OFF ON FIRST ORDER",
+            "altTextCta": "ORDER NOW"
+        },
+        "entityId": "85935",
+        "frequencyCapping": {}
+    },
+    {
+        "id": "1338696",
+        "imageId": "rng/md/carousel/production/d4e553ca01f7f0a7254a7fcf01215996",
+        "action": {
+            "link": "https://www.swiggy.com/collections/97262?collection_id=97262&header_title=Navaratri&tags=layout_worldcup2&type=rcv2",
+            "text": "Holi",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "Flat deals",
+            "altTextCta": "order now"
+        },
+        "entityId": "swiggy://collectionV2?collection_id=97262&tags=layout_worldcup2&header_title=Navaratri",
+        "frequencyCapping": {}
+    },
+    {
+        "id": "1376338",
+        "imageId": "rng/md/carousel/production/1fd881af04f881b20fca30dc50d038ad",
+        "action": {
+            "link": "https://www.swiggy.com/menu/6924",
+            "text": "FreshMenu",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "Menu @99",
+            "altTextCta": "Order Now"
+        },
+        "entityId": "6924",
+        "frequencyCapping": {},
+        "isManualAds": true
+    },
+    {
+        "id": "1372074",
+        "imageId": "rng/md/carousel/production/74a7bf24daee0e5755a4180016705339",
+        "action": {
+            "link": "https://www.swiggy.com/collections/97753?collection_id=97753&tags=layout_ux4&type=rcv2",
+            "text": "Gourmet BF",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "Gourmet",
+            "altTextCta": "Order now"
+        },
+        "entityId": "97753",
+        "frequencyCapping": {}
+    },
+    {
+        "id": "1376343",
+        "imageId": "rng/md/carousel/production/07983e8a681a72d4b0d673f17c3a9aa2",
+        "action": {
+            "link": "https://www.swiggy.com/menu/5938",
+            "text": "Burger King",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "Burger King",
+            "altTextCta": "Order Now"
+        },
+        "entityId": "5938",
+        "frequencyCapping": {},
+        "isManualAds": true
+    },
+    {
+        "id": "1376341",
+        "imageId": "rng/md/carousel/production/3057f3335c3ed7c84370f98fa3c34220",
+        "action": {
+            "link": "https://www.swiggy.com/menu/12808",
+            "text": "A2B Veg",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "A2B Veg_20",
+            "altTextCta": "Order Now"
+        },
+        "entityId": "12808",
+        "frequencyCapping": {},
+        "isManualAds": true
+    },
+    {
+        "id": "1376342",
+        "imageId": "rng/md/carousel/production/41eb82d021136409450eb90ebd82f67f",
+        "action": {
+            "link": "https://www.swiggy.com/menu/435405",
+            "text": "Chaayos",
+            "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+            "altText": "60",
+            "altTextCta": "Order Now"
+        },
+        "entityId": "435405",
+        "frequencyCapping": {},
+        "isManualAds": true
+    }
+]

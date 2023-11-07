@@ -1,0 +1,25 @@
+.food-type-card-section-main-container{
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.food-type-card-section-main-container h3{
+    align-self: flex-start;
+    margin-left: 7px;
+    margin-top: 13px;
+}
+.food-type-card-container{
+    width: 100%;
+}
+.food-type-card{
+    display: flex;
+    overflow: auto;
+    gap: 3px;
+}
+.food-type-card::-webkit-scrollbar{
+    display: none;
+}
+.food-type-card img{
+    width:125px;
+}

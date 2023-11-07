@@ -1,0 +1,20 @@
+.sub-category-main-container{
+    padding-top: 65px;
+    display: flex;
+    flex-direction: column;
+}
+.sub-category-title{
+    display: flex;
+    justify-content:flex-start;
+    margin-left: 10px;
+    margin-bottom: 11px;
+    align-items: center;
+}
+.sub-category-title h3{
+    margin: auto;
+}
+.sub-category-sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
