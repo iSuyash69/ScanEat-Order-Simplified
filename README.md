@@ -1,4 +1,4 @@
-# ScanEat - Order Simplified  [FrontEnd]
+# ScanEat - Order Simplified  [Client]
 
 🚀 Scan-Eat redefines the dining experience by seamlessly integrating technology. Customers can effortlessly place orders, check order status, and conveniently settle their bills via a simple QR code scan at the table, all within our user-friendly web application.
 📊 Not just that, our project includes an analytics dashboard for managers, providing invaluable insights and empowering informed decision-making for the restaurant.
