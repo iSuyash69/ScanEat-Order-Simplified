@@ -14,7 +14,7 @@ const connection = mysql.createConnection({
   password: "manager"
 });
 
-
+// okay
 
 let abc = 0;
 let obj;
