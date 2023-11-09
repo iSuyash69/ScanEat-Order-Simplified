@@ -6,7 +6,7 @@
 
 ## Image Slider
 
-![Image 1](/assets/images/dashboard.png)
+![Image 1](https://drive.google.com/file/d/1uR_raRd5UmC-Ef2PZY5rVhEKhf-ZRw-0/view?usp=drive_link)
 *Manager Dashboard*
 
 ![Image 2](/assets/images/userPages.jpg)
