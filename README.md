@@ -6,7 +6,7 @@
 
 ## Image Slider
 
-![Image 1](../ScanEat-Order_Simplified-main/assets/images/dashboard.png)
+![Image 1](/assets/images/dashboard.png)
 *Manager Dashboard*
 
 ![Image 2](/assets/images/userPages.jpg)
