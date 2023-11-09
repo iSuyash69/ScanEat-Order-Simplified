@@ -56,10 +56,6 @@ git clone https://github.com/iSuyash69/ScanEat-Order-Simplified
 
 Change to Project Directory
 
-```bash
- cd client
-```
-
 Install Dependencies
 
 ```bash
