@@ -39,7 +39,7 @@ const SearchPage=()=>{
         handleSearch();
     }, [text]);
 
-    handleKeyDown=(event)=>{
+    const handleKeyDown=(event)=>{
         if(event.key=='Enter'){
             event.target.blur();
         }

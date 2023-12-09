@@ -44,7 +44,7 @@ const ManagerPage=()=>{
             fetchData();
         },2000);
         fetchData();
-        return()=>clearIntervaNPl(fetchDataInterval);
+        return()=>clearInterval(fetchDataInterval);
     },[]);
 
     useEffect(()=>{
