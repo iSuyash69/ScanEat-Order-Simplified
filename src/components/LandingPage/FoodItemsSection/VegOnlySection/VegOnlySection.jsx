@@ -87,7 +87,7 @@ const VegOnlySection=({foodItems,setFoodItems})=>{
                 <i className={`fa-solid fa-chevron-down ${showItems2 ? 'rotate':''}`}></i>
             </div>
             {(showItems2==true)?(
-                indianMainCourseItemsCard
+                rotiItemsCard
                 ):(
                     null
                 )
@@ -109,7 +109,7 @@ const VegOnlySection=({foodItems,setFoodItems})=>{
                 <i className={`fa-solid fa-chevron-down ${showItems4 ? 'rotate':''}`}></i>
             </div>
             {(showItems4==true)?(
-                nonVegItemsCard
+                vegStarterItemsCard
                 ):(
                     null
                 )
@@ -120,7 +120,7 @@ const VegOnlySection=({foodItems,setFoodItems})=>{
                 <i className={`fa-solid fa-chevron-down ${showItems5 ? 'rotate':''}`}></i>
             </div>
             {(showItems5==true)?(
-                vegStarterItemsCard
+                desertsItemsCard
                 ):(
                     null
                 )

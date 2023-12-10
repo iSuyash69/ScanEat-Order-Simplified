@@ -75,7 +75,7 @@ const BillPopUp=()=>{
 
       return (
         billPopUp ? (
-          <div  onClick={handleClick} className="place-order-pop-up" style={{ padding: '15px' }}>
+          <div  onClick={handleClick} className="place-order-pop-up" style={{position:'relative'}}>
             <h4>Request Bill generation</h4>
           </div>
         ) : null
