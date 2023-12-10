@@ -78,9 +78,9 @@ const OrderedItemsPage=()=>{
                 )}
                 </div>
             </div>
-            <div className="ordered-items-sub-container">
+            <div className="ordered-items-sub-container" style={{marginBottom:'60px'}}>
                 <h3 className="ordered-items-sub-container-title">Delivered</h3>
-                <div style={{ justifyContent: 'center' }} className="ordered-item-card-container">
+                <div style={{ justifyContent: 'center'}} className="ordered-item-card-container">
                 {deliveredData.map((card, index) => (
                     <OrderedItemCard card={card} key={index} />
                     ))

@@ -45,10 +45,10 @@ const BillPopUp=()=>{
               if (result.isConfirmed) {
                 axios.get(config.apiUrl+`/home/${id}/abcd/bill`)
                 .then((response)=>{
-                  console.log(response.data);
-                  setBillGenerated(true);
                   Swal.fire('Your Bil will be generated shortly!')
                   navigate(`/${id}`);
+                  console.log(response.data);
+                  setBillGenerated(true);
                 })
                 .catch(()=>{
                   console.log("failed");
@@ -75,7 +75,7 @@ const BillPopUp=()=>{
 
       return (
         billPopUp ? (
-          <div  onClick={handleClick} className="place-order-pop-up" style={{position:'relative'}}>
+          <div  onClick={handleClick} className="place-order-pop-up">
             <h4>Request Bill generation</h4>
           </div>
         ) : null
