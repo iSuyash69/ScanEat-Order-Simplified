@@ -4,10 +4,13 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import FeedbackPopUp from "../../LandingPage/FeedbackPopUp/FeedbackPopUp";
 import config from "/src/config.json";
+import ManagerPageNavBar from "../ManagerPageNavBar";
+import { UpdateModeEnum } from "chart.js";
 
 const updateItemField=()=>{
 
   const [update,setUpdate]=useState(true);
+  const [updateItems,setUpdateItems]=useState(true);
 
   const [itemID, setItemID] = useState('');
   const [name, setName] = useState('');
@@ -19,6 +22,7 @@ const updateItemField=()=>{
   const [recommended, setRecommended] = useState(false);
   const [vegOnly, setVegOnly] = useState(false);
   const [availability,setAvailability]=useState();
+
 
 
   const handleSubmit = (e) => {
@@ -91,8 +95,10 @@ const updateItemField=()=>{
   };
 
   return (
-    <div className="manager-dashboard-main-container" style={{flexDirection:'column',alignItems:'center',marginTop:'50px'}}>
-          <button style={{background:'gray',border:'solid 1px black',position:'absolute',right:'10',top:'-40'}} onClick={()=>{setUpdate(false)}}>Remove item ?</button>
+    <div>
+    <ManagerPageNavBar updateItems={updateItems} setUpdateItems={setUpdateItems}/>
+    <div className="manager-dashboard-main-container" style={{flexDirection:'column',alignItems:'center',paddingTop:'80px'}}>
+          <button style={{background:'gray',border:'solid 1px black',position:'absolute',right:'10',top:''}} onClick={()=>{setUpdate(false)}}>Remove item ?</button>
     {(update)?(
       <div style={{position:'relative',display:'flex',flexDirection:'column',alignItems:'center',gap:'10px'}}>
       <h3>Add Food Item</h3>
@@ -154,6 +160,7 @@ const updateItemField=()=>{
   </div>
 </div>
 )}
+    </div>
     </div>
   );
 }

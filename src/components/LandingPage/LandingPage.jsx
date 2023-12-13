@@ -17,6 +17,7 @@ import { setTableId } from "../utils/ReduxStore/table_idSlice/table_idSlice";
 // import managerData from "/managerData.json";
 import FeedbackPopUp from "./FeedbackPopUp/FeedbackPopUp";
 import config from "/src/config.json";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 const LandingPage=()=>{
 
@@ -27,6 +28,7 @@ const LandingPage=()=>{
     const [isBill,setIsBill]=useState(false);
     const [isFeedbackPopUp,setIsFeedbackPopUp]=useState(true);
     const [groupedData,setGroupedData]=useState({});
+    const [status,setStatus]=useState(true);
 
     const {table_id}=useParams();
     const dispatch=useDispatch();
@@ -37,6 +39,17 @@ const LandingPage=()=>{
     const id=useSelector((store)=>store.table_id.table_id);
 
     console.log(id);
+
+    useEffect(()=>{
+        axios.get(config.apiUrl+ `/home/${id}`)
+        .then((response)=>{
+            console.log(response.data.status);
+            setStatus(response.data.status);
+        })
+        .catch(()=>{
+            console.log("status call failed");
+        })
+    },[]);
 
     useEffect(()=>{fetchData();},[]);
 
@@ -127,6 +140,11 @@ const LandingPage=()=>{
 
     console.log(foodItems);
     console.log(offersList);
+    
+
+    if(status=='occupied'){
+        return <ErrorPage/>
+    }
     
     if(offersList.length==0 || foodItems.length==0){
         return <LandingPageShimmerUI/>

@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import BillGenCard from "./BillGenCard/BillGenCard";
 import { Link } from "react-router-dom";
 import config from "/src/config.json";
-
+import socket from "../../socket";
 
 const ManagerPage=()=>{
 
@@ -29,14 +29,14 @@ const ManagerPage=()=>{
           });
             // setOrders(managerData);
 
-            axios.get(config.apiUrl+'/manager/bill')
-            .then((response)=>{
-              console.log(response.data);
-              setNotification(response.data)
-            })
-            .catch(()=>{
-              console.log('notification get request failed')
-            })
+            // axios.get(config.apiUrl+'/manager/bill')
+            // .then((response)=>{
+            //   console.log(response.data);
+            //   setNotification(response.data)
+            // })
+            // .catch(()=>{
+            //   console.log('notification get request failed')
+            // })
       };
 
     useEffect(()=>{
@@ -48,12 +48,19 @@ const ManagerPage=()=>{
     },[]);
 
     useEffect(()=>{
+      socket.on("chat",(payload)=>{
+          setNotification([payload]);
+      })
+    },[])
+
+    useEffect(()=>{
         // notification.map((item,index)=>{
-          if(notification!==''){
+          if(notification!=''){
           toast.info(`Bill Requested by Table ${notification}`,{autoClose:false,onClose:()=>{console.log('Notification closed');}});
           }
         // })
     },[notification])
+
 
     useEffect(() => {
         const organizedData = orders.reduce((acc, currentItem) => {

@@ -103,7 +103,7 @@ const BillPage=({id,bill,setBill,isBill,setIsBill})=>{
             <div>
                 <div className="food-item-popup-modal" style={{cursor:'auto',zIndex:'50'}}></div>
                 <div  style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',zIndex:'100',display:'flex',flexDirection:'column',background:'#f1f1f6',padding:'20px 25px',borderRadius:'15px',cursor:'auto',width:'350px'}}>
-                    <i class="fa-solid fa-x" onClick={(e)=>{e.stopPropagation();closeBill()}} style={{cursor:'pointer',position:'absolute',right:'15',top:'10',fontSize:'16px'}}></i>
+                    {/* <i class="fa-solid fa-x" onClick={(e)=>{e.stopPropagation();closeBill()}} style={{cursor:'pointer',position:'absolute',right:'15',top:'10',fontSize:'16px'}}></i> */}
                     <h4 style={{textAlign:'center',fontSize:'17px',fontWeight:'500',marginBottom:'12px'}}>Table No : {id}</h4>
                     {groupedData.map((item,index)=>{
                         return <div style={{display:'flex',width:'100%',justifyContent:'center',gap:'0px',fontSize:'14.5px'}} key={index}>

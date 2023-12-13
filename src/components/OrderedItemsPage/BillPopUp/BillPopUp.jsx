@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2"
 import config from "/src/config.json";
+import socket from "../../../socket";
 
 const BillPopUp=()=>{
 
@@ -12,57 +13,106 @@ const BillPopUp=()=>{
     const [billPopUp,setBillPopUp]=useState(true);
     const navigate=useNavigate();
 
-    const handleClick=()=>{
+    // const handleClick=()=>{
 
-        const swalWithCustomButtons = Swal.mixin({
-            customClass: {
+    //     const swalWithCustomButtons = Swal.mixin({
+    //         customClass: {
+    //           confirmButton: 'custom-confirm-button',
+    //           cancelButton: 'custom-cancel-button',
+    //         },
+    //         buttonsStyling: true,
+    //       });
+          
+    //       swalWithCustomButtons
+    //         .fire({
+    //           title: 'Are you sure?',
+    //           text: "Order will End once bill is generated!",
+    //           icon: 'warning',
+    //           showCancelButton: true,
+    //           confirmButtonText: 'Confirm',
+    //           cancelButtonText: 'Cancel',
+    //           showCloseButton: true, // You can include a custom close button
+    //           showLoaderOnConfirm: true,
+    //           preConfirm: () => {
+    //             // You can add your custom logic here
+    //             return new Promise((resolve) => {
+    //               setTimeout(() => {
+    //                 resolve();
+    //               }, 1000);
+    //             });
+    //           },
+    //         })
+    //         .then((result) => {
+    //           if (result.isConfirmed) {
+    //             axios.get(config.apiUrl+`/home/${id}/abcd/bill`)
+    //             .then((response)=>{
+    //               Swal.fire('Your Bil will be generated shortly!')
+    //               navigate(`/${id}`);
+    //               console.log(response.data);
+    //               setBillGenerated(true);
+    //             })
+    //             .catch(()=>{
+    //               console.log("failed");
+    //               Swal.fire({
+    //                 icon: "error",
+    //                 title: "Oops...",
+    //                 text: "Something went wrong! Please try again.",
+    //               });
+    //             })
+    //           } else if (result.dismiss === Swal.DismissReason.cancel) {
+    //             swalWithCustomButtons.fire('Cancelled', 'Enjoy your meal :)', 'error');
+    //           }
+    //         });
+    // }
+    const handleClick = () => {
+      const swalWithCustomButtons = Swal.mixin({
+          customClass: {
               confirmButton: 'custom-confirm-button',
               cancelButton: 'custom-cancel-button',
-            },
-            buttonsStyling: true,
-          });
-          
-          swalWithCustomButtons
-            .fire({
+          },
+          buttonsStyling: true,
+      });
+  
+      swalWithCustomButtons
+          .fire({
               title: 'Are you sure?',
-              text: "Order will End once bill is generated!",
+              text: "Order will end once the bill is generated!",
               icon: 'warning',
               showCancelButton: true,
               confirmButtonText: 'Confirm',
               cancelButtonText: 'Cancel',
-              showCloseButton: true, // You can include a custom close button
+              showCloseButton: true,
               showLoaderOnConfirm: true,
               preConfirm: () => {
-                // You can add your custom logic here
-                return new Promise((resolve) => {
-                  setTimeout(() => {
-                    resolve();
-                  }, 1000);
-                });
-              },
-            })
-            .then((result) => {
-              if (result.isConfirmed) {
-                axios.get(config.apiUrl+`/home/${id}/abcd/bill`)
-                .then((response)=>{
-                  Swal.fire('Your Bil will be generated shortly!')
-                  navigate(`/${id}`);
-                  console.log(response.data);
-                  setBillGenerated(true);
-                })
-                .catch(()=>{
-                  console.log("failed");
-                  Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: "Something went wrong! Please try again.",
+                  return new Promise((resolve) => {
+                      setTimeout(() => {
+                          resolve();
+                      }, 1000);
                   });
-                })
+              },
+          })
+          .then((result) => {
+              if (result.isConfirmed) {
+                  socket.emit("chat", id, (error) => {
+                      if (error) {
+                          console.error("Error sending chat message:", error);
+                          swalWithCustomButtons.fire({
+                              icon: "error",
+                              title: "Oops...",
+                              text: "Something went wrong! Please try again.",
+                          });
+                      } else {
+                          swalWithCustomButtons.fire('Your bill will be generated shortly!');
+                          navigate(`/${id}`);
+                          setBillGenerated(true);
+                      }
+                  });
               } else if (result.dismiss === Swal.DismissReason.cancel) {
-                swalWithCustomButtons.fire('Cancelled', 'Enjoy your meal :)', 'error');
+                  swalWithCustomButtons.fire('Cancelled', 'Enjoy your meal :)', 'error');
               }
-            });
-    }
+          });
+  };
+  
 
     useEffect(() => {
         if (billGenerated !== null) {

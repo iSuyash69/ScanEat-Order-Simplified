@@ -1,0 +1,127 @@
+.manager-page2-main-container{
+    width: 100%;
+    /* height:100vh; */
+    display: flex;
+    flex-direction: column;
+}
+.manager-page-navbar{
+    position: fixed;
+    display: flex;
+    justify-content:space-between;
+    height: 55px;
+    z-index: 1005;
+    background-color: white;
+}
+.scan-eat-logo-manager-page{
+    justify-content: flex-start;
+}
+.manager-page-routes{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 100px;
+}
+.routes-name{
+    color: #6E6E6E;
+    transition: all ease 0.3s;
+}
+.routes-name:hover{
+    color:#fc8019;
+    cursor: pointer;
+}
+/* .r1{
+    color: #fc8019;
+} */
+/* .r2{
+    color: #fc8019;
+}
+.r3{
+    color: #fc8019;
+} */
+.manager-profile-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right:10px;
+}
+.manager-page-sub-container{
+    padding-top:75px;
+    padding-left: 18px;
+    padding-right: 25px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: gray; */
+    height:100vh;
+    width: 100%;
+}
+.manager-page-sub-sub-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.manager-page-sub-sub-sub-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.manager-page-order-status-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.manager-page-order-status-container h2{
+    font-size: 20px;
+    margin-right: 20px; 
+}
+.manager-page-order-status-container div{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.manager-page-order-status-container button{
+    padding: 4px 14px;
+    border: 1px solid ;
+    border-radius: 5px;
+    font-weight: 500;
+    /* background:lightyellow; */
+    margin-right: 15px;
+    cursor: pointer;
+}
+.manager-page-order-status-container div input{
+    height: 38px;
+    width: 250px;
+    padding-left: 10px;
+    font-size: 14px;
+    border: solid 2px gray;
+    border-radius: 7px;
+}
+.manager-page-order-status-container div i{
+    position: absolute;
+    right: 13;
+    font-size: 18px;
+    color: black;
+}
+.manager-page-card-container{
+    /* background-color: antiquewhite; */
+    height: 31vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    gap: 30px;
+    align-items: center;
+}
+
+/* -------------- pending card styling goes here -------------- */
+
+.pending-item-card1{
+   display: flex;
+   flex-direction: column;
+   background-color: #EFF2FF;
+   width: 210px;
+   height: 185px;
+   border-radius: 6px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+   /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+   /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
+}

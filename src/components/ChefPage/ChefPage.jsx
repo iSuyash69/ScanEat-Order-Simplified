@@ -4,6 +4,10 @@ import ChefPreparingCard from "./ChefPreparingCard/ChefPreparingCard";
 import axios from "axios";
 import "./chefPage.css"
 import config from "/src/config.json";
+import { Link } from "react-router-dom";
+import logo from "/assets/images/Logo.png";
+import qrCode from "/assets/images/qrcode.png";
+import chefPic from "/assets/images/267_SkVNQSBBTk4gMjU4OC0zNw-removebg-preview.png";
 
 const ChefPage=()=>{
 
@@ -75,9 +79,23 @@ const ChefPage=()=>{
 
   return(
       <div style={{zIndex:'1000',position:'relative',background:'white',width:"100%",height:'100vh'}}>
-          <div style={{width:'100%',background:'#f1f1f6'}}>
-          <h3 className="manager-card-title" style={{height:'40px',backgroundColor: '#e6e6eb',width:'100%'}}><span style={{margin:'auto',fontWeight:'bold',position:'absolute',top:'5',left:'45%'}}>Preparing Orders</span></h3>
-              <div style={{width:'100%',height:'calc(100vh - 28px)',background:'white',display:'flex',flexWrap:'wrap',gap:'25px',paddingTop:'15px',paddingLeft:'20px',alignContent:'flex-start'}}>
+          <div>
+            <div className="navBar-container navBar-container-cartPage manager-page-navbar" style={{display:'flex',justifyContent:'space-between'}}>
+              <div className="navBar-sub-container scan-eat-logo-manager-page">
+                  <Link style={{textDecoration:'none',color:'black'}} to={'/Chef'}>
+                      <div style={{display:'flex',alignItems:'center'}}>
+                          <img src={logo} alt="error"></img>
+                          <h2 style={{position:'relative',right:'6'}}>Sc<img style={{width:'30px',height:'30px',position:'relative',top:'7'}} src={qrCode}></img>n<span style={{color:'#fc8019'}}>Eat</span></h2>
+                      </div>
+                  </Link>
+              </div>
+              <div className="manager-profile-container" style={{display:'flex',alignItems:'center',marginRight:'25px',gap:'10px'}} >
+                  <img style={{width:'50px',borderRadius:'50%',border:'darkGray 2px solid',background:'#EFF2FF'}} src={chefPic}></img>
+                  <h4 style={{fontWeight:'500',color:'#6E6E6E'}}>Chef</h4>
+              </div>
+          </div>  
+          {/* <h3 className="manager-card-title" style={{height:'40px',backgroundColor: '#e6e6eb',width:'100%'}}><span style={{margin:'auto',fontWeight:'bold',position:'absolute',top:'5',left:'45%'}}>Preparing Orders</span></h3> */}
+              <div style={{width:'100%',height:'calc(100vh - 28px)',background:'white',display:'flex',flexWrap:'wrap',gap:'25px',paddingTop:'15px',paddingLeft:'20px',alignContent:'flex-start',paddingTop:'75px'}}>
                   {arrayData.map((card,index)=>{
                      return  (card.length!=0)?(
                        <ChefPreparingCard card={card} key={index} handleStatusChange={handleStatusChange}/>

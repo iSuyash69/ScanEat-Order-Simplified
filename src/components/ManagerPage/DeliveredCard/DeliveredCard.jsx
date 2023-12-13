@@ -61,26 +61,29 @@ const DeliveredCard=({card})=>{
         })
     }
     return(
-        <div className="delivered-item-card" style={{cursor:'pointer'}} onClick={()=>handleClick(card.table_number)}>
-            <p style={{fontWeight:'500',fontSize:'16.5px',width:'100%',display:'flex',justifyContent:'center',background:'#007bff',height:'31px',alignItems:'center',color:'white',borderTopLeftRadius:'10px',borderTopRightRadius:'10px'}}>Table No : {card.table_number}</p>
+        <div className="pending-item-card1" style={{cursor:'pointer'}} onClick={()=>handleClick(card.table_number)}>
+            <p style={{fontWeight:'500',fontSize:'16.5px',width:'100%',display:'flex',justifyContent:'center',background:'#3475FF',height:'31px',alignItems:'center',color:'white',borderTopLeftRadius:'6px',borderTopRightRadius:'6px'}}>Table No : {card.table_number}</p>
             <div style={{display:'flex',flexDirection:'column',height:'130px',justifyContent:'flex-start',gap:'3px',marginBottom:'5px',marginTop:'5px',overflow:'auto'}}>
                 {card.orders.map((item)=>{
                     return <div style={{display:'flex',justifyContent:'space-between',padding:'0px 12px',fontSize:'14px'}}>
-                                <p>{item.item_name}</p>
-                                <p>x{item.quantity}</p>
+                                <p style={{fontWeight:'500'}}>{item.item_name}</p>
+                                <p style={{fontWeight:'500'}}>x{item.quantity}</p>
                             </div>
-                            })}
+                            })
+                }
             </div>
-            <div style={{display:'flex',justifyContent:'space-between',padding:'0px 10px',alignItems:'center',height:'29px',background:billSend? 'orange' : 'rgb(255,0,0,.8)', borderBottomLeftRadius:'10px',borderBottomRightRadius:'10px'}}>
-                <div style={{display:'flex',justifyContent:'center',gap:'10px',alignItems:'center',width:'100%'}}>
-                    <p style={{fontSize:'14px',fontWeight:'500',color:'white'}}>Total :</p>
+            <div style={{display:'flex',justifyContent:'center',padding:'0px 10px',alignItems:'center',height:'29px', borderBottomLeftRadius:'5px',borderBottomRightRadius:'5px'}}>
+                <div style={{display:'flex',justifyContent:'center',gap:'6px',alignItems:'center',minWidth:'70%',background:billSend? '##fc8019' : 'rgb(255,0,0,.8)',marginBottom:'15px',height:'28px',borderRadius:'3px',position:'relative'}}>
+                    <i style={{color:'white'}} class="fa-solid fa-wallet"></i>
+                    {/* <i class="fa-solid fa-dollar-sign"></i> */}
+                    <p style={{fontSize:'14px',fontWeight:'400',color:'white'}}>Total :</p>
                     <p style={{fontSize:'14px',fontWeight:'500',color:'white'}}>Rs {totalPrice.toFixed(2)*100/100}</p>
                 </div>
             </div>
             {(bill.length!=0)?(
                 <div>
-                <div className="food-item-popup-modal" onClick={(e)=>{e.stopPropagation();closeBill()}} style={{cursor:'auto',zIndex:'50'}}></div>
-                <div  style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',zIndex:'100',display:'flex',flexDirection:'column',background:'#f1f1f6',padding:'20px 30px',borderRadius:'15px',cursor:'auto',width:'500px'}}>
+                <div className="food-item-popup-modal" onClick={(e)=>{e.stopPropagation();closeBill()}} style={{cursor:'auto',zIndex:'1500',height:'100vh'}}></div>
+                <div  style={{position:'absolute',bottom:'70%',left:'50%',transform:'translate(-50%,-50%)',zIndex:'2000',display:'flex',flexDirection:'column',background:'#f1f1f6',padding:'20px 30px',borderRadius:'15px',cursor:'auto',width:'500px'}}>
                     <i class="fa-solid fa-x" onClick={(e)=>{e.stopPropagation();closeBill()}} style={{cursor:'pointer',position:'absolute',right:'15',top:'10',fontSize:'17px'}}></i>
                     <h4 style={{textAlign:'center',fontSize:'18px',fontWeight:'500',marginBottom:'12px'}}>Table No : {bill.table_number}</h4>
                     {bill.billData.map((item,index)=>{

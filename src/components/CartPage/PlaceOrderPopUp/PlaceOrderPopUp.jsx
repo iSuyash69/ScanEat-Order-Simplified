@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { addItem } from "../../utils/ReduxStore/allItemsSlice/allItemsSlice";
 import { useState } from "react";
 import config from "/src/config.json";
+import socket from "../../../socket";
 
 const PlaceOrderPopUp=({special_instruction})=>{
 
@@ -43,7 +44,10 @@ const PlaceOrderPopUp=({special_instruction})=>{
             })
         );
 
-        event.preventDefault();
+
+        // event.preventDefault();
+        // socket.emit("chat",id);
+        
         axios.post(config.apiUrl+`/home/${id}/abc/placeOrder`,selectedData)
         .then((response)=>{
             console.log(response.data);

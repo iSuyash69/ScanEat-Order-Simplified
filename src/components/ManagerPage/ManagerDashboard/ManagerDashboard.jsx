@@ -12,9 +12,11 @@ import DoughnutChart from "./DoughnutChart/DoughnutChart";
 // import weeklyData from "/src/weeklyData.json";
 // import monthlyData from "/src/monthlyData.json";
 import config from "/src/config.json";
+import ManagerPageNavBar from "../ManagerPageNavBar";
 
 const ManagerDashboard=()=>{
 
+    const [dashboard,setDashboard]=useState(true);
     const [pieChartJson,setPieChartJson]=useState(null);
     const [pieChart,setPieChart]=useState('today');
     const [pieChartData, setPieChartData] = useState({
@@ -53,6 +55,9 @@ const ManagerDashboard=()=>{
     const [totalOrderJson,setTotalOrderJson]=useState(null);
     const [totalOrderStatus,setTotalOrderStatus]=useState('today');   
 
+    // useEffect(()=>{
+    //     setDashboard(true);
+    // },[]);
 
     // --------------------- for pieChartData fetching  -------------------------
 
@@ -313,10 +318,11 @@ const ManagerDashboard=()=>{
 
     return(
         <div className="manager-dashboard-main-container" style={{flexDirection:'column',background:'#F4F4F4'}}>
-            <div style={{padding:'10px 0px',paddingLeft:'14px',background:'white',fontSize:'14px'}}>
+            {/* <div style={{padding:'10px 0px',paddingLeft:'14px',background:'white',fontSize:'14px'}}>
                 <h3 style={{fontWeight:'500'}}>Manager Dashboard</h3>
-            </div>
-            <div style={{background:'',display:'flex',width:'calc(100vw)',flexDirection:'row',height:'100vh',backgroundColor:'#F4F4F4'}}>
+            </div> */}
+            <ManagerPageNavBar dashboard={dashboard} setDashboard={setDashboard}/>
+            <div style={{background:'',display:'flex',width:'calc(100vw)',flexDirection:'row',Height:'100vh',backgroundColor:'#F4F4F4',paddingTop:'50px'}}>
                 <div style={{width:'40%',height:'100%',background:'',display:'flex',flexDirection:'column',alignItems:'center'}}>
                     <div style={{display:'flex',width:'100%',height:'250px',background:'',justifyContent:'center',alignItems:'center',gap:'20px'}}>
                         <div style={{position:'relative',display:'flex',height:'214px',background:'white',width:'45%',boxShadow:'rgba(0, 0, 0, 0.04) 0px 3px 5px',borderRadius:'5px'}}>

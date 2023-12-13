@@ -4,6 +4,7 @@ import ManagerPage from "../ManagerPage";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import config from "/src/config.json";
+import ManagerPage2 from "../ManagerPage2";
 
 
 const ManagerPageLogin=()=>{
@@ -28,6 +29,7 @@ const ManagerPageLogin=()=>{
             console.log(response.data);
             if(response.data==true){
                 setIsLogin(true);
+                sessionStorage.setItem(setIsLogin,true);
             }
             else{
                 alert('Invaild Credentials');
@@ -49,7 +51,7 @@ const ManagerPageLogin=()=>{
                 </div>
             </div>
             ):(
-                <ManagerPage/>
+                <ManagerPage2/>
             )}
         </div>
     );
