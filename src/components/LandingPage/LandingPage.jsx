@@ -142,9 +142,9 @@ const LandingPage=()=>{
     console.log(offersList);
     
 
-    if(status=='occupied'){
-        return <ErrorPage/>
-    }
+    // if(status=='occupied'){
+    //     return <ErrorPage/>
+    // }
     
     if(offersList.length==0 || foodItems.length==0){
         return <LandingPageShimmerUI/>
