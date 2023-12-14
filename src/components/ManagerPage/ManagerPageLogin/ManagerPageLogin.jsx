@@ -10,7 +10,7 @@ import ManagerPage2 from "../ManagerPage2";
 const ManagerPageLogin=()=>{
 
     const [password,setPassword]=useState('');
-    const [isLogin,setIsLogin]=useState(false);
+    const [isLogin,setIsLogin]=useState(sessionStorage.getItem('setIsLogin') || false);
     const [name,setName]=useState('');
 
     const handlePasswordChange=(event)=>{
@@ -29,7 +29,7 @@ const ManagerPageLogin=()=>{
             console.log(response.data);
             if(response.data==true){
                 setIsLogin(true);
-                sessionStorage.setItem(setIsLogin,true);
+                sessionStorage.setItem('setIsLogin',true);
             }
             else{
                 alert('Invaild Credentials');

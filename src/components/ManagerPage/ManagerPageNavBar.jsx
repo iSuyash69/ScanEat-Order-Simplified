@@ -30,9 +30,9 @@ const ManagerPageNavBar=({dashboard,setDashboard,liveOrders,setLiveOrders,update
                 </Link>
             </div>
             <div className="manager-page-routes">
-                <Link style={{textDecoration:'none'}} to={"/Manager"}><h4 className="routes-name r1" style={{fontWeight:'500',color:dashboard? '#6E6E6E' : '#fc8019'}}>Live Orders</h4></Link>
-                <Link style={{textDecoration:'none'}} to={"dashboard"}><h4 className="routes-name r2" style={{fontWeight:'500',color:liveOrders?'#6E6E6E':'#fc8019'}}>Dashboard</h4></Link>
-                <Link style={{textDecoration:'none'}} to={"Manager/updateItems"}><h4 className="routes-name r3" style={{fontWeight:'500',color:(liveOrders==true && dashboard==true)?'#fc8019':''}}>Update Items</h4></Link>
+                <a style={{textDecoration:'none'}} href="/Manager"><h4 className="routes-name r1" style={{fontWeight:'500',color:dashboard? '#6E6E6E' : '#fc8019'}}>Live Orders</h4></a>
+                <a style={{textDecoration:'none'}} href="/Manager/dashboard"><h4 className="routes-name r2" style={{fontWeight:'500',color:liveOrders?'#6E6E6E':'#fc8019'}}>Dashboard</h4></a>
+                <a style={{textDecoration:'none'}} href="/Manager/updateItems"><h4 className="routes-name r3" style={{fontWeight:'500',color:(liveOrders==true && dashboard==true)?'#fc8019':''}}>Update Items</h4></a>
             </div>
             <div className="manager-profile-container">
                 <img style={{width:'43px',borderRadius:'50%'}} src={managerPic}></img>

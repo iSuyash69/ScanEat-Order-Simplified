@@ -16,6 +16,7 @@ import ManagerPageNavBar from "../ManagerPageNavBar";
 
 const ManagerDashboard=()=>{
 
+    const [dashboard,setDashboard]=useState(true);
     const [pieChartJson,setPieChartJson]=useState(null);
     const [pieChart,setPieChart]=useState('today');
     const [pieChartData, setPieChartData] = useState({
@@ -317,7 +318,7 @@ const ManagerDashboard=()=>{
             {/* <div style={{padding:'10px 0px',paddingLeft:'14px',background:'white',fontSize:'14px'}}>
                 <h3 style={{fontWeight:'500'}}>Manager Dashboard</h3>
             </div> */}
-            <ManagerPageNavBar/>
+            <ManagerPageNavBar dashboard={dashboard} setDashboard={setDashboard}/>
             <div style={{background:'',display:'flex',width:'calc(100vw)',flexDirection:'row',Height:'100vh',backgroundColor:'#F4F4F4',paddingTop:'50px'}}>
                 <div style={{width:'40%',height:'100%',background:'',display:'flex',flexDirection:'column',alignItems:'center'}}>
                     <div style={{display:'flex',width:'100%',height:'250px',background:'',justifyContent:'center',alignItems:'center',gap:'20px'}}>
