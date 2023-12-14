@@ -54,11 +54,6 @@ const ManagerDashboard=()=>{
     const [totalOrderJson,setTotalOrderJson]=useState(null);
     const [totalOrderStatus,setTotalOrderStatus]=useState('today');   
 
-    const [dashboard,setDashboard]=useState(true);
-
-    // useEffect(()=>{
-    //     setDashboard(true);
-    // },[]);
 
     // --------------------- for pieChartData fetching  -------------------------
 
@@ -322,7 +317,7 @@ const ManagerDashboard=()=>{
             {/* <div style={{padding:'10px 0px',paddingLeft:'14px',background:'white',fontSize:'14px'}}>
                 <h3 style={{fontWeight:'500'}}>Manager Dashboard</h3>
             </div> */}
-            <ManagerPageNavBar dashboard={dashboard} setDashboard={setDashboard}/>
+            <ManagerPageNavBar/>
             <div style={{background:'',display:'flex',width:'calc(100vw)',flexDirection:'row',Height:'100vh',backgroundColor:'#F4F4F4',paddingTop:'50px'}}>
                 <div style={{width:'40%',height:'100%',background:'',display:'flex',flexDirection:'column',alignItems:'center'}}>
                     <div style={{display:'flex',width:'100%',height:'250px',background:'',justifyContent:'center',alignItems:'center',gap:'20px'}}>
@@ -335,7 +330,7 @@ const ManagerDashboard=()=>{
                                 </select>
                                 <div style={{padding:'17px',border:'solid 3.5px rgb(80,208,102)',borderRadius:'50%',width:'60px',display:'flex',alignItems:'center',justifyContent:'center'}}><i style={{fontSize:'18px',color:'rgb(80,208,102)'}} class="fa-solid fa-dollar-sign"></i></div>
                                 {(totalEarningJson)?(
-                                    {/* <h4 style={{fontSize:'21px',marginLeft:'0px',marginTop:'10px',lineHeight:'1',color:'rgb(80,208,102)'}}>₹{totalEarningJson.totalSalesOrder[0].total_price*100/100}</h4> */}
+                                    <h4 style={{fontSize:'21px',marginLeft:'0px',marginTop:'10px',lineHeight:'1',color:'rgb(80,208,102)'}}>₹{totalEarningJson.totalSalesOrder[0].total_price*100/100}</h4>
                                 ):(null)}
                                 <h5 style={{marginLeft:'3px',fontSize:'14px',fontWeight:'500',color:'gray'}}>Total Earning</h5>
                             </div>
@@ -357,7 +352,7 @@ const ManagerDashboard=()=>{
                                         <option value='this month'>This Month</option>
                                     </select>
                                     {(totalOrderJson)?(
-                                        {/* <h4 style={{fontSize:'21px',marginLeft:'3px',marginTop:'10px',lineHeight:'1',color:'orange'}}>{totalOrderJson.totalSalesOrder[0].total_orders}</h4> */}
+                                        <h4 style={{fontSize:'21px',marginLeft:'3px',marginTop:'10px',lineHeight:'1',color:'orange'}}>{totalOrderJson.totalSalesOrder[0].total_orders}</h4>
                                     ):(null)}
                                     <h5 style={{marginLeft:'3px',fontSize:'14px',fontWeight:'500',color:'gray',position:'absolute',marginTop:'103px'}}>Total Orders</h5>
                                 </div>
