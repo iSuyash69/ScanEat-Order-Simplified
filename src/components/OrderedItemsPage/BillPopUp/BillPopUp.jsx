@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2"
 import config from "/src/config.json";
-import socket from "../../../socket";
+// import socket from "../../../socket";
 
 const BillPopUp=()=>{
 

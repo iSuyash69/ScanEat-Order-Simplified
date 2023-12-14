@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import config from "/src/config.json";
-import socket from "../../socket";
+// import socket from "../../socket";
 import PendingCard from "./PendingCard/PendingCard";
 import PreparingCard from "./PreparingCard/PreparingCard";
 import DeliveredCard from "./DeliveredCard/DeliveredCard";

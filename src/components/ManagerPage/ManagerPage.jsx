@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import BillGenCard from "./BillGenCard/BillGenCard";
 import { Link } from "react-router-dom";
 import config from "/src/config.json";
-import socket from "../../socket";
+// import socket from "../../socket";
 
 const ManagerPage=()=>{
 

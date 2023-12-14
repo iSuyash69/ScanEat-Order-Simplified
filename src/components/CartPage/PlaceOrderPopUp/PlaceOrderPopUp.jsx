@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { addItem } from "../../utils/ReduxStore/allItemsSlice/allItemsSlice";
 import { useState } from "react";
 import config from "/src/config.json";
-import socket from "../../../socket";
+// import socket from "../../../socket";
 
 const PlaceOrderPopUp=({special_instruction})=>{
 
