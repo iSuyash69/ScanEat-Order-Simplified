@@ -49,11 +49,11 @@ const ManagerPage2=()=>{
         return()=>clearInterval(fetchDataInterval);
     },[]);
 
-    useEffect(()=>{
-      socket.on("chat",(payload)=>{
-          setNotification([payload]);
-      })
-    },[])
+    // useEffect(()=>{
+    //   socket.on("chat",(payload)=>{
+    //       setNotification([payload]);
+    //   })
+    // },[])
 
     useEffect(()=>{
         // notification.map((item,index)=>{
